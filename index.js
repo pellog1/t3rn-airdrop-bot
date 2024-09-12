@@ -54,7 +54,7 @@ const CONTRACT_ADDRESS = T3RN_ABI.at(-1).CA_ARBT;
           )} ] Doing transactions for address ${wallet.address}...`.yellow
         );
 
-        if (balanceInEth < 0.001) {
+        if (balanceInEth < 0.1) {
           console.log(
             `❌ [ ${moment().format(
               'HH:mm:ss'
@@ -89,7 +89,7 @@ const CONTRACT_ADDRESS = T3RN_ABI.at(-1).CA_ARBT;
               gasLimit: 2000000, // adjustable
               gasPrice,
               from: wallet.address,
-              value: parseUnits('0.0001', 'ether'), // adjustable
+              value: parseUnits('0.01', 'ether'), // adjustable
             };
 
             const result = await wallet.sendTransaction(transaction);
