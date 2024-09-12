@@ -113,7 +113,7 @@ const CONTRACT_ADDRESS = T3RN_ABI.at(-1).CA_ARBT;
             counter--;
 
             if (counter > 0) {
-              await delay(30000);
+              await delay(3000000);
             }
           } catch (error) {
             console.log(
